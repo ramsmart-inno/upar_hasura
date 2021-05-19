@@ -8,6 +8,8 @@ services:
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://upar_postgres:EnUmAfT#2019@upar.cycxew4kba1d.ap-south-1.rds.amazonaws.com/upar
       HASURA_GRAPHQL_ACCESS_KEY: EnUmAfT@2019
+      HASURA_GRAPHQL_ENDPOINT: http://65.2.98.230:8080
+      HASURA_RUN_CONSOLE: "true"
     command:
       - graphql-engine
       - serve
