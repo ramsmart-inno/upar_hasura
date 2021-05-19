@@ -1,0 +1,14 @@
+version: '2'
+services:
+  graphql-engine:
+    image: hasura/graphql-engine:latest
+    ports:
+      - '80:8080'
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://upar_postgres:EnUmAfT#2019@i-0fc69f371e2dcf51d:5432/upar
+      HASURA_GRAPHQL_ACCESS_KEY: EnUmAfT@2019
+    command:
+      - graphql-engine
+      - serve
+      - --enable-console
